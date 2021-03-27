@@ -1,0 +1,5 @@
+{
+  "cors": "https://cors-lol.herokuapp.com/",
+  "api": "http://18.188.22.189:420/",
+  "token": "joe"
+}
