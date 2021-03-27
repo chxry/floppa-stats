@@ -1,0 +1,17 @@
+@import "./_variables.scss";
+
+.playerstat {
+  display: flex;
+  align-items: center;
+  font-family: $mono;
+  white-space: pre;
+  span {
+    font-weight: 800;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+  }
+}

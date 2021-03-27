@@ -1,0 +1,20 @@
+@import "./_variables.scss";
+
+.player {
+  background: $card;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  img {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 1rem;
+  }
+
+  .name {
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 6px 0 6px 0;
+  }
+}
