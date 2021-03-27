@@ -13,7 +13,9 @@
   "scripts": {
     "dev": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "prettier --write ."
+    "lint": "prettier --write .",
+    "preci": "rm -fr node_modules",
+    "ci": "yarn install --frozen-lockfile"
   },
   "devDependencies": {
     "@types/node": "^12.0.0",
