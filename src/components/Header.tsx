@@ -5,7 +5,7 @@ import logo from "../assets/logo.png";
 
 const Header = () => {
   return (
-    <div className="header">
+        <div className="header">
       <img src={logo} />
       <h1>Floppa Stats</h1>
     </div>
