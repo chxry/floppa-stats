@@ -6,7 +6,7 @@
     "start": "webpack serve --config webpack.config.js",
     "build": "webpack --config webpack.prod.config.js",
     "prettier": "prettier --write .",
-    "test:jest": "jest --config jest.config.js",
+    "test:jest": "jest --config .jestrc.json",
     "test:prettier": "prettier --check .",
     "test:eslint": "eslint src/"
   },

@@ -1,0 +1,7 @@
+{
+  "setupFilesAfterEnv": ["<rootDir>/src/setup-tests.ts"],
+  "moduleNameMapper": {
+    "^.+\\.(s[ac]ss)$": "identity-obj-proxy",
+    "^.+\\.png$": "<rootDir>/src/__mocks__/fileMock.ts"
+  }
+}

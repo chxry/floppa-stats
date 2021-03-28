@@ -1,37 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../assets/scss/playercard.scss";
 import Emoji from "react-apple-emojis";
 
 import PlayerStat from "./PlayerStat";
-import { queryData } from "../utils/query";
 import { PlayerData } from "../utils/types";
 
-type PlayerCardProps = {
+export type PlayerCardProps = {
   uuid: string;
+  data: PlayerData;
 };
 
-const PlayerCard = ({ uuid }: PlayerCardProps) => {
-  const [data, setData] = useState<PlayerData>({
-    name: "",
-    hours: "...",
-    mobs: "...",
-    mined: "...",
-    placed: "...",
-    distance: "...",
-    deaths: "...",
-  });
-  console.log(data);
-
-  useEffect(() => {
-    queryData(uuid).then((data) => setData(data));
-  }, []);
+const PlayerCard = ({ uuid, data }: PlayerCardProps) => {
+  const { name, hours, mobs, mined, placed, distance, deaths } = data;
 
   return (
     <div className="player">
       <img src={`https://crafatar.com/avatars/${uuid}?&overlay`} />
       <h2 className="name">
-        {!!data.name ? (
-          data.name
+        {!!name ? (
+          name
         ) : (
           <>
             <Emoji name="hourglass-not-done" />
@@ -39,19 +26,15 @@ const PlayerCard = ({ uuid }: PlayerCardProps) => {
           </>
         )}
       </h2>
-      <PlayerStat emoji="alarm-clock" display="Playtime" value={data.hours} />
-      <PlayerStat emoji="dagger" display="Mobs killed" value={data.mobs} />
-      <PlayerStat emoji="pick" display="Blocks mined" value={data.mined} />
-      <PlayerStat emoji="brick" display="Blocks placed" value={data.placed} />
-      <PlayerStat
-        emoji="person-running"
-        display="Travelled"
-        value={data.distance}
-      />
+      <PlayerStat emoji="alarm-clock" display="Playtime" value={hours} />
+      <PlayerStat emoji="dagger" display="Mobs Killed" value={mobs} />
+      <PlayerStat emoji="pick" display="Blocks Mined" value={mined} />
+      <PlayerStat emoji="brick" display="Blocks Placed" value={placed} />
+      <PlayerStat emoji="person-running" display="Travelled" value={distance} />
       <PlayerStat
         emoji="skull-and-crossbones"
         display="Deaths"
-        value={data.deaths}
+        value={deaths}
       />
     </div>
   );

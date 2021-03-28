@@ -10,7 +10,7 @@ type PlayerStatProps = {
 
 const PlayerStat = ({ display, value, emoji }: PlayerStatProps) => {
   return (
-    <div className="playerstat">
+    <div className="stat">
       <Emoji name={emoji} />
       <span>{display}: </span>
       {value}

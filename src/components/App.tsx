@@ -1,7 +1,7 @@
 import React from "react";
 
 import Header from "./Header";
-import PlayerCard from "./PlayerCard";
+import PlayerCardController from "./PlayerCardController";
 
 const App = () => {
   const players = [
@@ -14,7 +14,7 @@ const App = () => {
       <Header />
       <div className="content">
         {players.map((player, idx) => (
-          <PlayerCard key={idx} uuid={player} />
+          <PlayerCardController key={idx} uuid={player} />
         ))}
       </div>
     </div>

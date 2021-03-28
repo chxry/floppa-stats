@@ -1,12 +1,12 @@
 @import "./_variables.scss";
 
-.playerstat {
+.stat {
   display: flex;
   align-items: center;
   font-family: $mono;
   white-space: pre;
   span {
-    font-weight: 800;
+    font-weight: 900;
   }
 
   img {

@@ -3,10 +3,15 @@
 .header {
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  @media (min-width: $width-lg) {
+    width: $width-lg;
+  }
 
   img {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     @media (min-width: $width-lg) {
       width: 100px;
       height: 100px;
@@ -14,7 +19,7 @@
   }
 
   h1 {
-    font-size: 48px;
+    font-size: 56px;
     font-weight: 800;
     @media (min-width: $width-lg) {
       font-size: 100px;
