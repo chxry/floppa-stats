@@ -12,4 +12,6 @@ jobs:
           node-version: 12
       - run: rm -rf node_modules
       - run: yarn install --frozen-lockfile
-      - run: yarn test
+      - run: yarn test:jest
+      - run: yarn test:prettier
+      - run: yarn test:eslint
