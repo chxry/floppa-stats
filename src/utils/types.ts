@@ -1,7 +1,9 @@
-export type Data = {
+export interface PlayerData {
   name: string;
   hours: string;
   mobs: string;
-  blocks: string;
+  mined: string;
+  placed: string;
+  distance: string;
   deaths: string;
-};
+}

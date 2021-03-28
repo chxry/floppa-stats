@@ -1,1 +1,3 @@
-## This is a simple web app I made to view my friends and I statistics on a minecraft server.
+# react-typescript-jest-webpack
+
+Webpack template for a React app with TypeScript and Jest

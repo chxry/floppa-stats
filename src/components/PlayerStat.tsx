@@ -1,6 +1,5 @@
 import React from "react";
 import "../assets/scss/playerstat.scss";
-// @ts-ignore
 import Emoji from "react-apple-emojis";
 
 type PlayerStatProps = {
