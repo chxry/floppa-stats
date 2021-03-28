@@ -1,13 +1,15 @@
 const path = require("path");
-const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  mode: "development",
   output: {
-    publicPath: "/",
+    path: path.resolve(__dirname, "build"),
+    filename: "[name].[contenthash].js",
+    publicPath: "",
   },
   entry: "./src/index.ts",
   module: {
@@ -43,15 +45,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "src/index.html",
     }),
-    new webpack.HotModuleReplacementPlugin(),
     new ForkTsCheckerWebpackPlugin({
       async: false,
     }),
     new ESLintPlugin({
       extensions: ["js", "jsx", "ts", "tsx"],
     }),
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "[name].[contenthash].css",
+    }),
   ],
-  devtool: "inline-source-map",
   devServer: {
     contentBase: path.join(__dirname, "build"),
     historyApiFallback: true,

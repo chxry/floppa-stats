@@ -17,6 +17,7 @@ it("should render player card", () => {
 
   render(PlayerCard(playerCardProps));
   Object.keys(playerCardProps.data).forEach((prop) => {
+    // @ts-ignore
     expect(screen.getByText(playerCardProps.data[prop])).toBeInTheDocument();
   });
 });
