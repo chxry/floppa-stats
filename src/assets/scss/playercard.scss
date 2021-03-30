@@ -2,14 +2,14 @@
 
 .player {
   background: $card;
-  box-shadow: $shadow;
+  @include shadow;
   transition: box-shadow 500ms;
   border-radius: 1rem;
   padding: 1rem;
   margin: 0 1rem 0 1rem;
 
   &:hover {
-    box-shadow: $shadow-long;
+    @include shadow-long;
   }
 
   img {

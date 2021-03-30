@@ -3,7 +3,7 @@
 .stat {
   display: flex;
   align-items: center;
-  font-family: $mono;
+  @include font-mono;
   white-space: pre;
   span {
     font-weight: 900;

@@ -4,16 +4,23 @@ $card: #050505aa;
 $text: #ffffff;
 
 // Shadows
-$shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
+@mixin shadow{ box-shadow:0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
   0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
   0 16px 16px rgba(0, 0, 0, 0.1), 0 32px 32px rgba(0, 0, 0, 0.1);
-$shadow-long: 0 1px 1px rgba(0, 0, 0, 0.4), 0 2px 2px rgba(0, 0, 0, 0.4),
+}
+
+@mixin shadow-long{ box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), 0 2px 2px rgba(0, 0, 0, 0.4),
   0 4px 4px rgba(0, 0, 0, 0.4), 0 8px 8px rgba(0, 0, 0, 0.4),
   0 16px 16px rgba(0, 0, 0, 0.4), 0 32px 32px rgba(0, 0, 0, 0.4);
+}
 
 // Fonts
-$regular: "Heebo", sans-serif;
-$mono: "IBM Plex Mono", monospace;
+@mixin font-regular {
+  font-family: "Heebo", sans-serif;
+} 
+@mixin font-mono {
+  font-family: "IBM Plex Mono", monospace;
+} 
 
 // Scaling
 $width-lg: 720px;
