@@ -11,6 +11,8 @@ it("should render player card", () => {
       mined: "85574",
       placed: "29426",
       distance: "516.75km",
+      food: "3619",
+      trades: "892",
       deaths: "25",
     },
   };

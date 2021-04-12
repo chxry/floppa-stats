@@ -16,6 +16,8 @@ const PlayerCardController = ({ uuid }: PlayerCardControllerProps) => {
     mined: "...",
     placed: "...",
     distance: "...",
+    food: "...",
+    trades: "...",
     deaths: "...",
   });
 

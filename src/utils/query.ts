@@ -30,12 +30,24 @@ const queryData = async (uuid: string) => {
       uuid,
       "statz_distance_traveled"
     );
+    const food = await queryParameter(uuid, "statz_food_eaten");
+    const trades = await queryParameter(uuid, "statz_villager_trades");
     const deaths = await queryParameter(uuid, "statz_deaths");
 
     const hours = (parseInt(playTime) / 60).toFixed(2) + "h";
     const distance = (parseInt(distanceBlocks) / 1000).toFixed(2) + "km";
 
-    const data = { name, hours, mobs, mined, placed, distance, deaths };
+    const data = {
+      name,
+      hours,
+      mobs,
+      mined,
+      placed,
+      distance,
+      food,
+      trades,
+      deaths,
+    };
     resolve(data);
   });
 };

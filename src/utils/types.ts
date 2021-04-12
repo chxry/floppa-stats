@@ -5,5 +5,7 @@ export interface PlayerData {
   mined: string;
   placed: string;
   distance: string;
+  food: string;
+  trades: string;
   deaths: string;
 }

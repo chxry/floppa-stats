@@ -11,7 +11,17 @@ export type PlayerCardProps = {
 };
 
 const PlayerCard = ({ uuid, data }: PlayerCardProps) => {
-  const { name, hours, mobs, mined, placed, distance, deaths } = data;
+  const {
+    name,
+    hours,
+    mobs,
+    mined,
+    placed,
+    distance,
+    food,
+    trades,
+    deaths,
+  } = data;
 
   return (
     <div className="player">
@@ -31,6 +41,8 @@ const PlayerCard = ({ uuid, data }: PlayerCardProps) => {
       <PlayerStat emoji="pick" display="Blocks Mined" value={mined} />
       <PlayerStat emoji="brick" display="Blocks Placed" value={placed} />
       <PlayerStat emoji="person-running" display="Travelled" value={distance} />
+      <PlayerStat emoji="pot-of-food" display="Food Eaten" value={food} />
+      <PlayerStat emoji="handshake" display="Villager Trades" value={trades} />
       <PlayerStat
         emoji="skull-and-crossbones"
         display="Deaths"
