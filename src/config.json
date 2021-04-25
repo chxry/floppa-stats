@@ -1,5 +1,5 @@
 {
   "cors": "https://cors-lol.herokuapp.com/",
-  "api": "https://floppa.world/api/",
+  "api": "https://api.floppa.world/",
   "token": "joe"
 }
